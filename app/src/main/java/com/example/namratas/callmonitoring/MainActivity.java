@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemTouch
 
     }
 
+    //Call logs
     public void callList() {
         callModelList = new ArrayList<CallModel>();
 
