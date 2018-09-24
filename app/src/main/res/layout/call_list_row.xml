@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/list_selector"
+        android:padding="5dip"
+        android:id="@+id/relativeLayout1">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_row_background">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:src="@drawable/ic_delete_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:layout_toLeftOf="@id/delete_icon"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@drawable/list_selector">
+        <!--  ListRow Left sied Thumbnail image -->
+        <LinearLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip"
+            android:layout_weight="2"
+            android:background="@drawable/image_bg"
+            android:gravity="center"
+            android:padding="3dip">
+
+            <TextView
+                android:id="@+id/contact_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPersonDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/layoutImage"
+            android:layout_toRightOf="@+id/layoutImage"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <!-- Person_Name-->
+            <TextView
+                android:id="@+id/person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/layoutImage"
+                android:layout_toRightOf="@+id/layoutImage"
+                android:text="Person Name"
+                android:textColor="#040404"
+                android:textSize="15dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <!-- Phone_Number -->
+            <TextView
+                android:id="@+id/phone_No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_name"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/layoutImage"
+                android:text="Phone No"
+                android:textColor="#343434"
+                android:textSize="10dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSimDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/layoutPersonDetails"
+            android:layout_toRightOf="@+id/layoutPersonDetails"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <!-- incoming or outgoing-->
+            <TextView
+                android:id="@+id/inoutcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/layoutPersonDetails"
+                android:layout_toRightOf="@+id/layoutPersonDetails"
+                android:text="Incoming"
+                android:textColor="#040404"
+                android:textSize="10dp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <!--inoutgoing icon-->
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inoutcoming"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/layoutPersonDetails"
+                android:textColor="#343434"
+                android:textSize="10dip" />
+
+            <TextView
+                android:id="@+id/sim_slot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon"
+                android:text="sim 1"
+                android:textColor="#040404"
+                android:textSize="10dp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/layoutSimDetails"
+            android:layout_toRightOf="@+id/layoutSimDetails"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <!-- Person_Name-->
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/layoutSimDetails"
+                android:layout_toRightOf="@+id/layoutSimDetails"
+                android:text="Today"
+                android:textColor="#040404"
+                android:textSize="10dp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inoutcoming"
+                android:layout_marginTop="1dip"
+                android:layout_toRightOf="@+id/layoutSimDetails"
+                android:text="   "
+                android:textColor="#e70e0e"
+                android:textSize="10dip" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <!-- Forward icon-->
+
+            <ImageView
+                android:id="@+id/forward_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/forward_image" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="text"/>
+   </LinearLayout>
+
+</FrameLayout>
